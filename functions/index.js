@@ -10,49 +10,50 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 const puppeteer = require("puppeteer");
-const Name = "";
-const code = "";
-const AmountOfBots = 0;
-const Guessing = true;
 
 exports.runPuppets = onRequest(async (request, response) => {
   const code = request.query.code;
   const AmountOfBots = request.query.AmountOfBots;
   const Name = request.query.Name;
   const Guessing = request.query.Guessing;
-
-  logger.info("Hello logs!", { structuredData: true });
-  response.send("Recieved PIN"+code+" Amt Of Bots "+AmountOfBots+" Name "+Name+" Guessing "+Guessing);
   const playerArray = [];
-
+  logger.info("Hello logs!", { structuredData: true });
+  response.send(
+    "Recieved PIN" +
+      code +
+      " Amt Of Bots " +
+      AmountOfBots +
+      " Name " +
+      Name +
+      " Guessing " +
+      Guessing
+  );
   if (Name.length >= 13) {
     throw new error("Name has to be lower than 12");
   }
-
   function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
-
   for (var index = 0; index != AmountOfBots; index++) {
     playerArray.push(Name + index);
   }
-
   function createCheckURL(page, browser) {
     return async function checkURL() {
       let current_url = page.url();
-      if (current_url == "https://kahoot.it/ranking") {
+      if (current_url === "https://kahoot.it/ranking") {
         await browser.close();
+        console.log("Closed");
+        process.exit(0);
       }
     };
   }
-
   async function start(PIN, NAME, GUESS) {
-    const browser = await puppeteer.launch({
-      headless: true,
-      defaultViewport: null,
-      args: ["--window-size=500,500"],
+    const browser = await puppeteer.connect({
+      browserWSEndpoint:
+        "wss://chrome.browserless.io?token=d5f0dd27-5e7c-49b5-9143-91646742b01a",
     });
     const page = await browser.newPage();
+
     setInterval(createCheckURL(page, browser), 1000);
     await page.goto("https://kahoot.it/");
     //type code
@@ -174,3 +175,16 @@ exports.runPuppets = onRequest(async (request, response) => {
     wait(2000);
   }
 });
+
+/*
+exports.test = onRequest(async (request, response) => {
+  const browser = await puppeteer.connect({
+    browserWSEndpoint:
+      "wss://chrome.browserless.io?token=d5f0dd27-5e7c-49b5-9143-91646742b01a",
+  });
+  const page = await browser.newPage();
+
+
+
+});
+*/
