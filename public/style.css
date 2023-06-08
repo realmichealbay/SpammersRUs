@@ -1,20 +1,35 @@
 @charset "UTF-8";
 @font-face {
     font-family: "Geologica";
-    src: url(/public/fonts/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf);
+    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.ttf?alt=media&token=ae91bade-e830-4ee8-ab4f-3ded35529ce0&_gl=1*19skdif*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA2MTEuMC4wLjA.");
 }
 @font-face {
     font-family: "Poppins2";
-    src: url(/public/fonts/Poppins/Poppins-Regular.ttf);
+    src: url(https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.);
 }
 @font-face {
     font-family: "Rubik2";
-    src: url(/public/fonts/Rubik/Rubik-VariableFont_wght.ttf);
+    src: url("");
 }
 @font-face {
     font-family: "Quicksand";
-    src: url(/public/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+    src: url("");
 }
+
+* {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    margin: 0;
+}
+
+html,body{
+    width: 100%;
+}
+
 .topnav {
   background-color: #141414;
   overflow: hidden;
@@ -42,6 +57,7 @@
 }
 #banner{
     font-family: "Geologica";
+    color: white;
 }
 #kahoot {
   font-family: "Montserrat", sans-serif;
@@ -60,17 +76,25 @@
     bottom: 4px;
 }
 .parallax-home {
-    background-image: url("/public/img/default.png");
-    min-height: 500px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/kahoot.png?alt=media&token=017194cb-b01e-48ea-b752-f34befa0c388&_gl=1*py32i8*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjE5MjkyMC4xNy4xLjE2ODYxOTYwMDIuMC4wLjA.");
+    min-height: 110vh;
     background-attachment: fixed;
+    position: relative;
+    z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
 .body-content{
     position: absolute;
     text-align: center;
-    left: 50%;
     top: 50%;
+    left: 6%;
+}
+
+.body-content #banner{
+    font-size: 60px;
+    position: relative;
+    text-shadow: 5px 5px #141414;
 }
