@@ -5,15 +5,15 @@
 }
 @font-face {
     font-family: "Poppins2";
-    src: url(https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.);
+    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.");
 }
 @font-face {
     font-family: "Rubik2";
-    src: url("");
+    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FRubik-VariableFont_wght.ttf?alt=media&token=4f7697ea-facb-4753-82da-9baf05635a8f&_gl=1*yx2m2a*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDI2MDUuMC4wLjA.");
 }
 @font-face {
     font-family: "Quicksand";
-    src: url("");
+    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.ttf?alt=media&token=75fda680-11e0-4da6-936b-148c10ba7b52&_gl=1*rx6y1v*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDIzNTguMC4wLjA.");
 }
 
 * {
