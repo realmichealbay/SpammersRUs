@@ -76,7 +76,7 @@ html,body{
     bottom: 4px;
 }
 .parallax-home {
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/kahoot.png?alt=media&token=017194cb-b01e-48ea-b752-f34befa0c388&_gl=1*py32i8*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjE5MjkyMC4xNy4xLjE2ODYxOTYwMDIuMC4wLjA.");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fkahoot.PNG?alt=media&token=477cd220-29cc-4cb5-a1bf-9640869496dd&_gl=1*uwegez*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI0NzE1My4xOS4xLjE2ODYyNDczMTguMC4wLjA.");
     min-height: 110vh;
     background-attachment: fixed;
     position: relative;
