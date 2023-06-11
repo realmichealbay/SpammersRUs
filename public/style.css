@@ -1,33 +1,34 @@
 @charset "UTF-8";
 @font-face {
-    font-family: "Geologica";
-    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.ttf?alt=media&token=ae91bade-e830-4ee8-ab4f-3ded35529ce0&_gl=1*19skdif*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA2MTEuMC4wLjA.");
+  font-family: "Geologica";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.ttf?alt=media&token=ae91bade-e830-4ee8-ab4f-3ded35529ce0&_gl=1*19skdif*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA2MTEuMC4wLjA.");
 }
 @font-face {
-    font-family: "Poppins2";
-    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.");
+  font-family: "Poppins2";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.");
 }
 @font-face {
-    font-family: "Rubik2";
-    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FRubik-VariableFont_wght.ttf?alt=media&token=4f7697ea-facb-4753-82da-9baf05635a8f&_gl=1*yx2m2a*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDI2MDUuMC4wLjA.");
+  font-family: "Rubik2";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FRubik-VariableFont_wght.ttf?alt=media&token=4f7697ea-facb-4753-82da-9baf05635a8f&_gl=1*yx2m2a*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDI2MDUuMC4wLjA.");
 }
 @font-face {
-    font-family: "Quicksand";
-    src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.ttf?alt=media&token=75fda680-11e0-4da6-936b-148c10ba7b52&_gl=1*rx6y1v*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDIzNTguMC4wLjA.");
+  font-family: "Quicksand";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.ttf?alt=media&token=75fda680-11e0-4da6-936b-148c10ba7b52&_gl=1*rx6y1v*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDIzNTguMC4wLjA.");
 }
 
 * {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    margin: 0;
+html {
+  margin: 0;
 }
 
-html,body{
-    width: 100%;
+html,
+body {
+  width: 100%;
 }
 
 .topnav {
@@ -39,62 +40,90 @@ html,body{
   width: 100%;
 }
 .topnav a {
-  height: 45px;
+  height: 35px;
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 20px 16px;
   text-decoration: none;
   font-size: 24px;
 }
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #181818;
 }
 .topnav a.active {
   background-color: grey;
   color: white;
 }
-#banner{
-    font-family: "Geologica";
-    color: white;
+#banner {
+  font-family: "Geologica";
+  color: white;
+  padding: 20px 16px;
 }
+
+@keyframes hoverover {
+  from {
+    background-color: #141414;
+  }
+  to {
+    background-color: #181818;
+  }
+}
+
+#banner:hover {
+  animation: hoverover 500ms;
+}
+
 #kahoot {
   font-family: "Montserrat", sans-serif;
+  padding: 20px 16px;
 }
 #gimkit {
   font-family: "Rubik2";
+  padding: 20px 16px;
 }
 #quizlet {
   font-family: "Poppins2";
+  padding: 14px 16px 26px 16px;
+}
+#quizizz {
+  font-family: "Quicksand";
+  padding: 14px 16px 26px 16px;
+}
+.parallax-front {
+  z-index: 1;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fkahoot.PNG?alt=media&token=477cd220-29cc-4cb5-a1bf-9640869496dd&_gl=1*uwegez*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI0NzE1My4xOS4xLjE2ODYyNDczMTguMC4wLjA.");
+
+
+}
+
+.body-content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 30%;
+}
+
+.body-content p {
+  font-family: "Geologica";
+  color: white;
+  font-size: 60px;
   position: relative;
-  bottom: 4px;
-}
-#quizizz{
-    font-family: "Quicksand";
-    position: relative;
-    bottom: 4px;
-}
-.parallax-home {
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fkahoot.PNG?alt=media&token=477cd220-29cc-4cb5-a1bf-9640869496dd&_gl=1*uwegez*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI0NzE1My4xOS4xLjE2ODYyNDczMTguMC4wLjA.");
-    min-height: 110vh;
-    background-attachment: fixed;
-    position: relative;
-    z-index: -1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
-.body-content{
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 6%;
+  text-shadow: 5px 5px #141414;
 }
 
-.body-content #banner{
-    font-size: 60px;
-    position: relative;
-    text-shadow: 5px 5px #141414;
+.bottomnav {
+  background-color: #141414;
+  overflow: hidden;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.bottomnav a {
+  height: 35px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
 }
