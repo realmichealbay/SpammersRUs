@@ -32,6 +32,7 @@ body {
 }
 
 .topnav {
+  padding-left: 20px;
   background-color: #141414;
   overflow: hidden;
   left: 0;
@@ -89,35 +90,16 @@ body {
   font-family: "Quicksand";
   padding: 14px 16px 26px 16px;
 }
-.parallax-front {
-  z-index: 1;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fkahoot.PNG?alt=media&token=477cd220-29cc-4cb5-a1bf-9640869496dd&_gl=1*uwegez*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI0NzE1My4xOS4xLjE2ODYyNDczMTguMC4wLjA.");
 
 
-}
-
-.body-content {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 30%;
-}
-
-.body-content p {
-  font-family: "Geologica";
-  color: white;
-  font-size: 60px;
-  position: relative;
-  text-shadow: 5px 5px #141414;
-}
 
 .bottomnav {
   background-color: #141414;
   overflow: hidden;
   left: 0;
   position: absolute;
-  bottom: 0;
   width: 100%;
+  padding-left: 20px;
 }
 .bottomnav a {
   height: 35px;
@@ -126,4 +108,38 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 24px;
+}
+
+.parallax-background {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2F4.png?alt=media&token=ca3f44f3-ac2c-4061-a7a9-f3df388cec35&_gl=1*1oqbg3t*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjU0MTM5NS4yNS4xLjE2ODY1NDE0MjMuMC4wLjA.");
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+
+.content {
+  height: 1500px;
+}
+.foreground-text {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Geologica";
+  color: white;
+  font-size: 60px;
+  text-shadow: 5px 5px #141414;
+  z-index: 1;
 }

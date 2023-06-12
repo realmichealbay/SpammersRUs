@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="icon" type="image/x-icon"
@@ -32,40 +32,47 @@
 <body>
   <div class="topnav">
     <a href="index.html" id="banner">Spammers R Us</a>
-    <a href="" class="change-bg" id="kahoot"
-      data-bg="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fkahoot.PNG?alt=media&token=477cd220-29cc-4cb5-a1bf-9640869496dd&_gl=1*uwegez*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI0NzE1My4xOS4xLjE2ODYyNDczMTguMC4wLjA.">Kahoot</a>
-    <a href="" class="change-bg" id="gimkit"
-      data-bg="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fgimkit.PNG?alt=media&token=2f298844-201c-4f79-bcb1-417b3523a6f4&_gl=1*1t4z3pv*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI3ODMxMy4yMS4xLjE2ODYyNzg0NTYuMC4wLjA.">Gimkit
-      (WIP)</a>
-    <a href="" class="change-bg" id="quizlet"
-      data-bg="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fquizlet.PNG?alt=media&token=8c6ed1e4-c073-4d05-ae7f-bf31130a18aa&_gl=1*tkb6jb*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjI3ODMxMy4yMS4xLjE2ODYyNzg0OTcuMC4wLjA.">Quizlet
-      Live(WIP)</a>
+    <a href="#kahoot.html" class="change-bg" id="kahoot" data-bg="">Kahoot</a>
+    <a href="" class="change-bg" id="gimkit" data-bg="">Gimkit(WIP)</a>
+    <a href="" class="change-bg" id="quizlet" data-bg="">Quizlet Live(WIP)</a>
     <a href="" class="change-bg" id="quizizz" data-bg="#">Quizizz (WIP)</a>
   </div>
-  <div class="parallax-home"></div>
-  <div class="body-content" align="center">
-    <p>Spammers R Us</p>
-    <div></div>
-    <p>Your One Stop Shop For All Bots</p>
 
+  <div class="parallax-background" id="background"></div>
+  <div class="content">
+    <p>content</p>
   </div>
-  <hr>
+  <div class="parallax-foreground" id="foreground">
+    <div class="foreground-text">
+      <p>Spammers R Us</p>
+      <p>Your One Stop Shop For All Bots</p>
+    </div>
+  </div>
+
+
   <footer>
     <div class="bottomnav">
       <a href="index.html" id="banner">Spammers R Us</a>
-      <a href="" id="kahoot">Kahoot</a>
+      <a href="#kahoot.html" id="kahoot">Kahoot</a>
       <a href="" id="gimkit">Gimkit (WIP)</a>
       <a href="" id="quizlet">Quizlet Live(WIP)</a>
       <a href="" id="quizizz">Quizizz (WIP)</a>
     </div>
   </footer>
 
-
+  <script>
+    document.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var background = document.getElementById("background");
+      var foreground = document.getElementById("foreground");
+      background.style.top = -(scrollTop * 0.1) + 'px'; // Moves slower, change 0.2 for more or less speed
+      foreground.style.top = -(scrollTop * 1) + 'px'; // Moves faster, change 0.5 for more or less speed
+    });
+  </script>
   <script>
     $(document).ready(function () {
       $(".change-bg").on('mouseenter click', function () {
         var newImage = $(this).data('bg');
-        console.log(newImage);
         $(".parallax-front").css('background-image', 'url(' + newImage + ')');
       });
     });
