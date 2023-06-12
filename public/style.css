@@ -28,6 +28,7 @@ html {
 
 html,
 body {
+  background-color: #141414;
   width: 100%;
 }
 
@@ -39,6 +40,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 .topnav a {
   height: 35px;
@@ -50,6 +52,7 @@ body {
 }
 .topnav a:hover {
   background-color: #181818;
+  animation: hoverover 500ms linear;
 }
 .topnav a.active {
   background-color: grey;
@@ -61,6 +64,7 @@ body {
   padding: 20px 16px;
 }
 
+
 @keyframes hoverover {
   from {
     background-color: #141414;
@@ -70,9 +74,6 @@ body {
   }
 }
 
-#banner:hover {
-  animation: hoverover 500ms;
-}
 
 #kahoot {
   font-family: "Montserrat", sans-serif;
@@ -91,8 +92,6 @@ body {
   padding: 14px 16px 26px 16px;
 }
 
-
-
 .bottomnav {
   background-color: #141414;
   overflow: hidden;
@@ -109,11 +108,18 @@ body {
   text-decoration: none;
   font-size: 24px;
 }
+.bottomnav a:hover{
+  animation: hoverover 500ms linear;
+}
+
+
 
 .parallax-background {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2F4.png?alt=media&token=ca3f44f3-ac2c-4061-a7a9-f3df388cec35&_gl=1*1oqbg3t*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjU0MTM5NS4yNS4xLjE2ODY1NDE0MjMuMC4wLjA.");
+  /*background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2F4.png?alt=media&token=ca3f44f3-ac2c-4061-a7a9-f3df388cec35&_gl=1*1oqbg3t*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjU0MTM5NS4yNS4xLjE2ODY1NDE0MjMuMC4wLjA.");
+  */
+  background-color: #181818;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +135,7 @@ body {
 }
 
 .content {
-  height: 1500px;
+  background-color: #181818;
 }
 .foreground-text {
   position: absolute;
@@ -142,4 +148,31 @@ body {
   font-size: 60px;
   text-shadow: 5px 5px #141414;
   z-index: 1;
+}
+
+hr {
+  height: 50px;
+  border: #141414;
+}
+
+.parent {
+  height: 1500px;
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-bottom: 10%;
+  padding-top: 20%;
+}
+
+.outside {
+}
+.inside {
+  font-family: "Geologica";
+  padding: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: #141414;
+  box-shadow: 10px 20px 8px #141414;
 }

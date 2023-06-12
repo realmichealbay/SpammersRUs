@@ -6,6 +6,7 @@
     href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Frobothonk.ico?alt=media&token=aa28361e-3408-434f-a479-a13ba6587a01&_gl=1*131dt5y*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDMxMTUuMC4wLjA.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta type="description" content="Spammer for Kahoot that actually works">
   <title>Welcome to SpammersRus</title>
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/9.22.1/firebase-app-compat.js"></script>
@@ -32,15 +33,18 @@
 <body>
   <div class="topnav">
     <a href="index.html" id="banner">Spammers R Us</a>
-    <a href="#kahoot.html" class="change-bg" id="kahoot" data-bg="">Kahoot</a>
+    <a href="kahoot.html" class="change-bg" id="kahoot" data-bg="">Kahoot</a>
     <a href="" class="change-bg" id="gimkit" data-bg="">Gimkit(WIP)</a>
     <a href="" class="change-bg" id="quizlet" data-bg="">Quizlet Live(WIP)</a>
     <a href="" class="change-bg" id="quizizz" data-bg="#">Quizizz (WIP)</a>
+
   </div>
 
-  <div class="parallax-background" id="background"></div>
-  <div class="content">
-    <p>content</p>
+  <div class="parallax-background" id="background">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#141414" fill-opacity="1"
+        d="M0,96L240,288L480,128L720,160L960,32L1200,192L1440,32L1440,0L1200,0L960,0L720,0L480,0L240,0L0,0Z"></path>
+    </svg>
   </div>
   <div class="parallax-foreground" id="foreground">
     <div class="foreground-text">
@@ -48,73 +52,101 @@
       <p>Your One Stop Shop For All Bots</p>
     </div>
   </div>
+  <div class="content" id="content-1">
+    <div class="parent">
+      <div class="outside"></div>
+      <div class="inside" id="inside">
+        <h1>What is Spammers R Us</h1>
+        <p>Spammers R Us was made to be a botter for kahoot, quizlet, quizizz, gimkit, and all other School related
+          games</p>
+        &nbsp;
+        <h1>Pricing</h1>
+        <p>SpammersRus is completeley free with ads, or a premium tier that gives priority to you with our servers. At
+          only 3$ a month &nbsp;
 
+        </p>
+        
+      </div>
+      <div class="outside"></div>
 
-  <footer>
-    <div class="bottomnav">
-      <a href="index.html" id="banner">Spammers R Us</a>
-      <a href="#kahoot.html" id="kahoot">Kahoot</a>
-      <a href="" id="gimkit">Gimkit (WIP)</a>
-      <a href="" id="quizlet">Quizlet Live(WIP)</a>
-      <a href="" id="quizizz">Quizizz (WIP)</a>
     </div>
-  </footer>
 
-  <script>
-    document.addEventListener("scroll", function () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var background = document.getElementById("background");
-      var foreground = document.getElementById("foreground");
-      background.style.top = -(scrollTop * 0.1) + 'px'; // Moves slower, change 0.2 for more or less speed
-      foreground.style.top = -(scrollTop * 1) + 'px'; // Moves faster, change 0.5 for more or less speed
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $(".change-bg").on('mouseenter click', function () {
-        var newImage = $(this).data('bg');
-        $(".parallax-front").css('background-image', 'url(' + newImage + ')');
+
+
+    <footer>
+      <div class="bottomnav">
+        <a href="index.html" id="banner">Spammers R Us</a>
+        <a href="#kahoot.html" id="kahoot">Kahoot</a>
+        <a href="" id="gimkit">Gimkit (WIP)</a>
+        <a href="" id="quizlet">Quizlet Live(WIP)</a>
+        <a href="" id="quizizz">Quizizz (WIP)</a>
+        <a href="" id="banner">FAQ</a>
+        <a href="" id="banner">About</a>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var background = document.getElementById("background");
+        var foreground = document.getElementById("foreground");
+        var content = document.getElementById("inside")
+        background.style.top = -(scrollTop * 1) + 'px'; // Moves slower, change 0.2 for more or less speed
+        foreground.style.top = -(scrollTop * 2) + 'px'; // Moves faster, change 0.5 for more or less speed
+        if (scrollTop >= 700) {
+          opacity = 1;
+        } else {
+          var opacity = 1 - (200 / scrollTop);
+        }
+        content.style.color = `rgba(255, 255, 255, ${opacity})`;
       });
-    });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const loadEl = document.querySelector('#load');
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      // // The Firebase SDK is initialized and available here!
-      //
-      // firebase.auth().onAuthStateChanged(user => { });
-      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-      // firebase.firestore().doc('/foo/bar').get().then(() => { });
-      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-      // firebase.messaging().requestPermission().then(() => { });
-      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-      // firebase.analytics(); // call to activate
-      // firebase.analytics().logEvent('tutorial_completed');
-      // firebase.performance(); // call to activate
-      //
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".change-bg").on('mouseenter click', function () {
+          var newImage = $(this).data('bg');
+          $(".parallax-front").css('background-image', 'url(' + newImage + ')');
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-      try {
-        let app = firebase.app();
-        let features = [
-          'auth',
-          'database',
-          'firestore',
-          'functions',
-          'messaging',
-          'storage',
-          'analytics',
-          'remoteConfig',
-          'performance',
-        ].filter(feature => typeof app[feature] === 'function');
-        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-      } catch (e) {
-        console.error(e);
-        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-      }
-    });
-  </script>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth',
+            'database',
+            'firestore',
+            'functions',
+            'messaging',
+            'storage',
+            'analytics',
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
 </body>
 
 </html>
