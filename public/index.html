@@ -54,24 +54,23 @@
   </div>
   <div class="content" id="content-1">
     <div class="parent">
-      <div class="outside"></div>
-      <div class="inside" id="inside">
+      <div></div>
+      <div class="inside" id="hidden">
         <h1>What is Spammers R Us</h1>
         <p>Spammers R Us was made to be a botter for kahoot, quizlet, quizizz, gimkit, and all other School related
           games</p>
-        &nbsp;
+      </div>
+      <div></div>
+
+      <div></div>
+      <div class="inside" id="hidden">
         <h1>Pricing</h1>
         <p>SpammersRus is completeley free with ads, or a premium tier that gives priority to you with our servers. At
-          only 3$ a month &nbsp;
-
+          only 3$ a month
         </p>
-        
       </div>
-      <div class="outside"></div>
-
+      <div></div>
     </div>
-
-
 
     <footer>
       <div class="bottomnav">
@@ -90,7 +89,8 @@
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         var background = document.getElementById("background");
         var foreground = document.getElementById("foreground");
-        var content = document.getElementById("inside")
+        var inside = document.getElementById("hidden")
+
         background.style.top = -(scrollTop * 1) + 'px'; // Moves slower, change 0.2 for more or less speed
         foreground.style.top = -(scrollTop * 2) + 'px'; // Moves faster, change 0.5 for more or less speed
         if (scrollTop >= 700) {
@@ -98,8 +98,22 @@
         } else {
           var opacity = 1 - (200 / scrollTop);
         }
-        content.style.color = `rgba(255, 255, 255, ${opacity})`;
+        inside.style.color = `rgba(255, 255, 255, ${opacity})`;
+
       });
+      /*
+      document.addEventListener("DOMContentLoaded", function () {
+        var slideInElement = document.getElementById("hidden");
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              slideInElement.style.transform = 'translateX(0)';
+              slideInElement.classList.remove('hidden');
+            }
+          });
+        });
+        observer.observe(slideInElement);
+      });*/
     </script>
     <script>
       $(document).ready(function () {

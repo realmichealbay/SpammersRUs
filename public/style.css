@@ -119,7 +119,7 @@ body {
   */
   background-color: #181818;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -156,14 +156,14 @@ hr {
 }
 
 .parent {
-  height: 1500px;
+  height: 1000px;
   display: grid;
   grid-template-columns: 15% 1fr 15%;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-row-gap: 10%;
   padding-bottom: 10%;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .outside {
@@ -175,4 +175,9 @@ hr {
   color: white;
   background-color: #141414;
   box-shadow: 10px 20px 8px #141414;
+}
+
+.hidden {
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out; /* this is for smooth sliding */
 }
