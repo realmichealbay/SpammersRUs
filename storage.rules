@@ -7,6 +7,9 @@ service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
       allow read, write: if false;
+      cors {
+        origin = ["http://127.0.0.1:5500"];
+      }
     }
   }
 }

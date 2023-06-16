@@ -1,3 +1,134 @@
+@font-face {
+  font-family: "Rubik2";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FProductSans.b2d5784e.ttf?alt=media&token=16f3c66d-2ed2-4cb5-9347-6dcc6f673696");
+}
+
 .parallax-background {
-    
+  background-repeat: repeat;
+  background-size: auto;
+  background-image: url("./img/gimkittest.png");
+}
+
+.gimkit-container {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  font-family: GimkitSF, sans-serif, sans-serif !important;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  font-variant: normal !important;
+  overflow-wrap: break-word;
+  overflow: auto;
+  width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.gimkit-main {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  font-variant: normal !important;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.46) 0px 4px 33px -6px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Rubik2";
+  opacity: 1;
+  transform: none;
+}
+.gimkit-input {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-wrap: break-word;
+  font-variant: normal !important;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  height: 50px;
+  outline: none;
+  border-radius: 4px;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(131, 131, 131);
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.21s ease 0s;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  margin-top: 14px;
+  margin-bottom: 7px;
+}
+.gimkit-secondary {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  font-family: "Rubik2";
+  font-variant: normal !important;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  padding: 8px 13px;
+  font-size: 15px;
+  background: rgb(30, 7, 107);
+  color: white;
+  transition: background 0.2s ease 0s;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.gimkit-secondary-inside {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  font-family: "Rubik2";
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-variant: normal !important;
+  overflow-wrap: break-word;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.gimkit-background-accent {
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  font-family: "Rubik2", sans-serif, sans-serif !important;
+  box-sizing: border-box;
+  font-variant: normal !important;
+  overflow-wrap: break-word;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
 }

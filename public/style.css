@@ -8,8 +8,8 @@
   src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.");
 }
 @font-face {
-  font-family: "Rubik2";
-  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FRubik-VariableFont_wght.ttf?alt=media&token=4f7697ea-facb-4753-82da-9baf05635a8f&_gl=1*yx2m2a*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDI2MDUuMC4wLjA.");
+  font-family: "Product Sans";
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FProductSans.b2d5784e.ttf?alt=media&token=16f3c66d-2ed2-4cb5-9347-6dcc6f673696");
 }
 @font-face {
   font-family: "Quicksand";
@@ -64,7 +64,6 @@ body {
   padding: 20px 16px;
 }
 
-
 @keyframes hoverover {
   from {
     background-color: #141414;
@@ -74,13 +73,12 @@ body {
   }
 }
 
-
 #kahoot {
   font-family: "Montserrat", sans-serif;
   padding: 20px 16px;
 }
 #gimkit {
-  font-family: "Rubik2";
+  font-family: "Product Sans";
   padding: 20px 16px;
 }
 #quizlet {
@@ -108,15 +106,14 @@ body {
   text-decoration: none;
   font-size: 24px;
 }
-.bottomnav a:hover{
+.bottomnav a:hover {
   animation: hoverover 500ms linear;
 }
 
-
-
+.parallax-background svg {
+  z-index: 3;
+}
 .parallax-background {
-  /*background-image: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2F4.png?alt=media&token=ca3f44f3-ac2c-4061-a7a9-f3df388cec35&_gl=1*1oqbg3t*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjU0MTM5NS4yNS4xLjE2ODY1NDE0MjMuMC4wLjA.");
-  */
   background-color: #181818;
   width: 100%;
   height: 90vh;
@@ -167,6 +164,7 @@ hr {
 }
 
 .outside {
+  color: #141414;
 }
 .inside {
   font-family: "Geologica";

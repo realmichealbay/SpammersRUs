@@ -13,12 +13,20 @@
   ],
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
+  "headers": [
+    {
+      "source": "https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+
   "storage": {
     "rules": "storage.rules"
   },
