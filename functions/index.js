@@ -48,10 +48,8 @@ exports.runPuppets = onRequest(async (request, response) => {
     };
   }
   async function start(PIN, NAME, GUESS) {
-    const browser = await puppeteer.connect({
-      browserWSEndpoint:
-        "wss://chrome.browserless.io?token=d5f0dd27-5e7c-49b5-9143-91646742b01a",
-    });
+    const browser = await puppeteer.launch({headless: false})
+
     const page = await browser.newPage();
 
     setInterval(createCheckURL(page, browser), 1000);
