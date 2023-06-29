@@ -31,7 +31,8 @@
 
     <meta property="og:title" content="Spammers R Us">
     <meta property="og:description" content="Kahoot Spammer">
-    <meta property="og:image" content="https://static.wikia.nocookie.net/sameleiren/images/6/6b/Brandon.jpg/revision/latest/thumbnail/width/360/height/360?cb=20230208132721">
+    <meta property="og:image"
+        content="https://static.wikia.nocookie.net/sameleiren/images/6/6b/Brandon.jpg/revision/latest/thumbnail/width/360/height/360?cb=20230208132721">
     <meta property="og:url" content="https://spammersrus.com/kahoot.html">
 
 </head>
@@ -127,6 +128,18 @@
                     var opacity = 1 - (200 / scrollTop);
                 }
                 content.style.color = `rgba(255, 255, 255, ${opacity})`;
+            });
+            document.querySelector(".kahoot-form").addEventListener("submit", function (event) {
+                // prevent the form from submitting (refreshing the page)
+                event.preventDefault();
+
+                // log the input values
+                let inputs = document.querySelectorAll('.kahoot-input');
+                let code = '';
+                inputs.forEach(input => {
+                    code += input.value;
+                });
+                console.log(code);
             });
         </script>
         <script>

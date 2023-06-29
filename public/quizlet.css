@@ -15,6 +15,9 @@
     background-color: #28a7a7;
   }
 }
+.quizlet-ui-input-input:focus + .quizlet-ui-input-border {
+    box-shadow: 0 4px 0 0 rgb(255, 205, 31);
+}
 
 .quizlet-main {
   --twilight-100: #edefff;
@@ -432,7 +435,7 @@
   height: 0.625rem;
   letter-spacing: normal;
   line-height: 1.4;
-  padding-bottom: 5%; 
+  padding-bottom: 5%;
   flex-shrink: 0;
   text-align: center;
   overflow: hidden;
@@ -466,8 +469,8 @@
 }
 
 .quizlet-button.active {
-    background-color: #228b22;
-  }
+  background-color: #228b22;
+}
 .quizlet-button.active:hover {
   animation-name: hovercolor;
   animation-duration: 0.12s;
@@ -475,42 +478,47 @@
 }
 
 .quizlet-ui-input-border /* Span class also UIInput-border*/ {
-    color: var(--gray-700-gray-200);
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 1.25;
-    text-align: center;
-    box-sizing: inherit;
-    font-feature-settings: "kern","liga","clig","calt";
-    -webkit-font-smoothing: antialiased;
-    font-kerning: normal;
-    font-variant-ligatures: common-ligatures contextual;
-    align-self: flex-end;
-    box-shadow: 0 .125rem 0 0 var(--gray-700-gray-200);
-    display: block;
-    height: .25rem;
-    transition: all .12s cubic-bezier(.47,0,.745,.715);
-    width: 100%;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.25;
+  text-align: center;
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  align-self: flex-end;
+  box-shadow: 0 2px 0 0 var(--gray-700-gray-200);
+  display: block;
+  height: 0.25rem;
+  transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+  width: 100%;
+  overflow: visible;
+  visibility: visible;
+
+
 }
 
 .quizlet-ui-input-label /* Span class also UIInput-label contains the _*/ {
-    cursor: pointer;
-    box-sizing: inherit;
-    font-feature-settings: "kern","liga","clig","calt";
-    -webkit-font-smoothing: antialiased;
-    font-kerning: normal;
-    font-variant-ligatures: common-ligatures contextual;
-    color: var(--gray-500-gray-400);
-    display: block;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: .0625rem;
-    line-height: 1.333333333333333;
-    margin-top: .625rem;
-    text-align: inherit;
-    text-transform: uppercase;
-    user-select: none;
-    visibility: hidden;
+  cursor: pointer;
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  color: var(--gray-500-gray-400);
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+  line-height: 1.333333333333333;
+  margin-top: 0.625rem;
+  text-align: inherit;
+  text-transform: uppercase;
+  user-select: none;
+  visibility: hidden;
 }

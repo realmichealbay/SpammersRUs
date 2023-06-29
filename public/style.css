@@ -16,8 +16,10 @@
   src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.ttf?alt=media&token=75fda680-11e0-4da6-936b-148c10ba7b52&_gl=1*rx6y1v*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDIzNTguMC4wLjA.");
 }
 
-* {
-  overflow-x: hidden;
+@media screen and (max-width: 856px) {
+  .parallax-background svg{
+    visibility: hidden;
+  }
 }
 
 html {
