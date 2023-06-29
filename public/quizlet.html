@@ -27,7 +27,7 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="gimkit.css">
+    <link rel="stylesheet" href="quizlet.css">
 
 </head>
 
@@ -50,19 +50,52 @@
 
     </div>
     <div class="parallax-foreground" id="foreground">
-        <div class="gimkit-background-accent">
-            <div class="gimkit-container" style="max-width: 400px;">
-                <div class="gimkit-main" style="opacity: 1; transform: none;">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Fgimkitlogo.svg?alt=media&token=1f51d51a-e54a-4b9c-8050-325a252db746"
-                        style="width: 70%; max-width: 220px;">
-                    <input placeholder="Game Code" pattern="[0-9]*" type="number" class="gimkit-input" value=""
-                        style="margin-top: 14px; margin-bottom: 7px;">
-                    <div type="secondary" color="#1E076B" class="gimkit-secondary" style="width: 100%;">
-                        <div class="gimkit-secondary-inside"><span>Join</span></div>
+        <form class="quizlet-main">
+            <div class="quizlet-header">Enter the join code</div>
+            <div class="quizlet-inside">
+                <div class="quizlet-code-input">
+                    <div class="quizlet-code-input-cell"><label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value=""><span
+                                    class="quizlet-ui-input-border"></span></div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label><label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value=""><span
+                                    class="quizlet-ui-input-border"></span></div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label><label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value=""><span
+                                    class="quizlet-ui-input-border"></span></div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label></div>
+                    <div class="quizlet-divider">—</div>
+                    <div class="quizlet-code-input-cell">
+                        <label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value="">
+                                <span class="quizlet-ui-input-border"></span>
+                            </div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label><label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value="">
+                                <span class="quizlet-ui-input-border"></span>
+                            </div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label><label class="quizlet-ui-input">
+                            <div class="quizlet-ui-input-content"><input aria-label="Game code" maxlength="1"
+                                    placeholder="0" class="quizlet-ui-input-input" type="text" value=""><span
+                                    class="quizlet-ui-input-border"></span></div>
+                            <span class="quizlet-ui-input-label">_</span>
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="quizlet-code-button"><button aria-label="Continue" class="quizlet-button" disabled=""
+                    type="submit"><span>Continue</span></button></div>
+        </form>
     </div>
     <div class="content" id="content-1">
         <div class="parent">
@@ -102,6 +135,40 @@
                 }
                 content.style.color = `rgba(255, 255, 255, ${opacity})`;
             });
+            document.addEventListener('DOMContentLoaded', function () {
+                let inputs = Array.from(document.querySelectorAll('.quizlet-ui-input-input'));
+                let button = document.querySelector('.quizlet-button');
+
+                // Listen for input and keyup events on each input field
+                inputs.forEach((input, index) => {
+                    input.addEventListener('input', () => {
+                        // Check if all inputs are filled
+                        if (inputs.every(input => input.value.trim() !== '')) {
+                            button.classList.add('active');
+                            button.disabled = false;
+                        } else {
+                            button.classList.remove('active');
+                            button.disabled = true;
+                        }
+
+                        // Check if current input field is filled and it's not the last one
+                        if (input.value.trim() !== '' && index < inputs.length - 1) {
+                            // Move focus to next input field
+                            inputs[index + 1].focus();
+                        }
+                    });
+
+                    input.addEventListener('keyup', (event) => {
+                        // Check if the Backspace key was pressed and the input field is empty
+                        if (event.key === 'Backspace' && input.value.trim() === '' && index > 0) {
+                            // Move focus to the previous input field
+                            inputs[index - 1].focus();
+                        }
+                    });
+                });
+            });
+
+
         </script>
         <script>
             $(document).ready(function () {
@@ -149,6 +216,29 @@
                 }
             });
         </script>
+        <script>
+            window.onload = function () {
+                const inputs = document.querySelectorAll('.quizlet-ui-input-input');
+                const button = document.querySelector('.quizlet-button');
+
+                for (let i = 0; i < inputs.length; i++) {
+                    inputs[i].addEventListener('input', () => {
+                        let allFilled = Array.from(inputs).every(input => input.value !== '');
+                        if (allFilled) {
+                            button.style.backgroundColor = "#3ccfcf";
+                            button.classList.add("active")
+                            button.disabled = false;
+                        } else {
+                            button.style.backgroundColor = ""; // Reset to default color when not all inputs are filled
+                            button.classList.remove('active');
+                            button.disabled = true;
+                        }
+                    });
+                }
+            };
+
+        </script>
+
 </body>
 
 </html>

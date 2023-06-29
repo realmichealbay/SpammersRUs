@@ -1,5 +1,516 @@
 @charset "UTF-8";
 
 .parallax-background {
-    background: #fff;
+  background: #fff;
+}
+@font-face {
+  font-family: "Rubik2";
+  src: url("../public/fonts/ProductSans.b2d5784e.ttf");
+}
+
+@keyframes hovercolor {
+  0% {
+  }
+  100% {
+    background-color: #28a7a7;
+  }
+}
+
+.quizlet-main {
+  --twilight-100: #edefff;
+  --twilight-200: #dbdfff;
+  --twilight-300: #a8b1ff;
+  --twilight-400: #7583ff;
+  --twilight-500: #4255ff;
+  --twilight-600: #423ed8;
+  --twilight-700: #1f1c8b;
+  --twilight-800: #14125c;
+  --twilight-900: #0a092d;
+  --gray-100: #fff;
+  --gray-200: #f6f7fb;
+  --gray-300: #edeff4;
+  --gray-400: #d9dde8;
+  --gray-500: #939bb4;
+  --gray-600: #586380;
+  --gray-700: #2e3856;
+  --gray-800: #282e3e;
+  --gray-900: #1a1d28;
+  --lemon-100: #fdffe9;
+  --lemon-200: #faffbb;
+  --lemon-300: #f5ff7d;
+  --lemon-400: #ebff03;
+  --lemon-500: #acbb00;
+  --sky-100: #eaf9ff;
+  --sky-200: #cbf1ff;
+  --sky-300: #98e3ff;
+  --sky-400: #51cfff;
+  --sky-500: #008ec4;
+  --sunset-100: #fff9e3;
+  --sunset-200: #ffedab;
+  --sunset-300: #ffdc62;
+  --sunset-400: #ffcd1f;
+  --sunset-500: #970;
+  --lilac-100: #fcf0ff;
+  --lilac-200: #f7d9ff;
+  --lilac-300: #eaf;
+  --lilac-400: #e372ff;
+  --lilac-500: #9900be;
+  --mint-100: #e6fcf4;
+  --mint-200: #c7f7e6;
+  --mint-300: #98f1d1;
+  --mint-400: #59e8b5;
+  --mint-500: #18ae79;
+  --sherbert-100: #fff6ef;
+  --sherbert-200: #ffe8d8;
+  --sherbert-300: #ffc38c;
+  --sherbert-400: #ff983a;
+  --sherbert-500: #d05700;
+  --error-100: #ff7873;
+  --error-200: #da4543;
+  --error-300: #b00020;
+  --teal-100: #e7f9f9;
+  --teal-200: #cff3f3;
+  --teal-300: #7dd;
+  --teal-400: #3ccfcf;
+  --teal-500: #28a7a7;
+  --spacing-xxsmall: 0.25rem;
+  --spacing-xsmall: 0.5rem;
+  --spacing-small: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-xlarge: 3rem;
+  --spacing-xxlarge: 4rem;
+  --radius-small: 0.25rem;
+  --radius-medium: 0.5rem;
+  --radius-large: 1rem;
+  --typography-heading-weight: 700;
+  --typography-body-weight: 400;
+  --typography-section-weight: 600;
+  --modal-margin: 5rem;
+  --modal-width: 38.75rem;
+  color: var(--gray-700-gray-200);
+  font-family: hurme_no2-webfont, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 100%;
+  line-height: 1.625;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  --error-100-error-300: #ff7873;
+  --error-200-error100: #da4543;
+  --error-red: #b00020;
+  --gray-100-gray-400: #fff;
+  --gray-100-gray-600: #fff;
+  --gray-100-gray-700: #fff;
+  --gray-100-gray-800: #fff;
+  --gray-100-gray-900: #fff;
+  --gray-100-twilight-500: #fff;
+  --gray-100-twilight-600: #fff;
+  --gray-100-twilight-900: #fff;
+  --gray-200-gray-600: #f6f7fb;
+  --gray-200-gray-700: #f6f7fb;
+  --gray-200-gray-800: #f6f7fb;
+  --gray-200-gray-900: #f6f7fb;
+  --gray-200-twilight-900: #f6f7fb;
+  --gray-300-gray-200: #edeff4;
+  --gray-300-gray-500: #edeff4;
+  --gray-300-gray-600: #edeff4;
+  --gray-300-gray-700: #edeff4;
+  --gray-300-gray-800: #edeff4;
+  --gray-300-gray-900: #edeff4;
+  --gray-400-gray-100: #d9dde8;
+  --gray-400-gray-200: #d9dde8;
+  --gray-400-gray-500: #d9dde8;
+  --gray-400-gray-600: #d9dde8;
+  --gray-400-gray-700: #d9dde8;
+  --gray-400-gray-800: #d9dde8;
+  --gray-400-gray-900: #d9dde8;
+  --gray-500-gray-100: #939bb4;
+  --gray-500-gray-200: #939bb4;
+  --gray-500-gray-400: #939bb4;
+  --gray-500-gray-600: #939bb4;
+  --gray-500-gray-700: #939bb4;
+  --gray-500-gray-800: #939bb4;
+  --gray-500-gray-900: #939bb4;
+  --gray-500-twilight-400: #939bb4;
+  --gray-600-gray-100: #586380;
+  --gray-600-gray-200: #586380;
+  --gray-600-gray-300: #586380;
+  --gray-600-gray-400: #586380;
+  --gray-600-gray-500: #586380;
+  --gray-600-gray-900: #586380;
+  --gray-600-twilight-200: #586380;
+  --gray-700-gray-100: #2e3856;
+  --gray-700-gray-200: #2e3856;
+  --gray-700-gray-300: #2e3856;
+  --gray-700-gray-400: #2e3856;
+  --gray-700-gray-500: #2e3856;
+  --gray-700-gray-600: #2e3856;
+  --gray-700-sherbert-200: #2e3856;
+  --gray-700-twilight-100: #2e3856;
+  --gray-700-twilight-200: #2e3856;
+  --gray-800-gray-100: #282e3e;
+  --gray-800-gray-200: #282e3e;
+  --gray-800-gray-300: #282e3e;
+  --gray-800-gray-400: #282e3e;
+  --gray-800-gray-500: #282e3e;
+  --gray-800-twilight-200: #282e3e;
+  --gray-800-twilight-900: #282e3e;
+  --gray-900-gray-100: #1a1d28;
+  --gray-900-gray-200: #1a1d28;
+  --gray-900-gray-300: #1a1d28;
+  --gray-900-gray-500: #1a1d28;
+  --gray-900-gray-600: #1a1d28;
+  --gray-900-gray-800: #1a1d28;
+  --lemon-200-gray-800: #faffbb;
+  --lemon-300-navy: #f5ff7d;
+  --lemon-300-twilight-600: #f5ff7d;
+  --lilac-100-gray-700: #fcf0ff;
+  --lilac-100-twilight-900: #fcf0ff;
+  --lilac-200-plum: #f7d9ff;
+  --lilac-300-gray-700: #eaf;
+  --mint-100-gray-700: #e6fcf4;
+  --mint-100-gray-800: #e6fcf4;
+  --mint-100-mint-400: #e6fcf4;
+  --mint-100-mint-500: #e6fcf4;
+  --mint-100-twilight-900: #e6fcf4;
+  --mint-200-gray-700: #c7f7e6;
+  --mint-200-gray-800: #c7f7e6;
+  --mint-200-mint-500: #c7f7e6;
+  --mint-300-mint-500: #98f1d1;
+  --mint-400-gray-100: #59e8b5;
+  --mint-400-mint-200: #59e8b5;
+  --mint-400-mint-500: #59e8b5;
+  --mint-500-mint-400: #18ae79;
+  --sherbert-100-gray-700: #fff6ef;
+  --sherbert-100-gray-800: #fff6ef;
+  --sherbert-100-gray-900: #fff6ef;
+  --sherbert-100-sunset-500: #fff6ef;
+  --sherbert-100-twilight-900: #fff6ef;
+  --sherbert-200-sherbert-500: #ffe8d8;
+  --sherbert-300-sherbert-500: #ffc38c;
+  --sherbert-400-twilight-500: #ff983a;
+  --sherbert-500-sherbert-400: #d05700;
+  --sky-100-gray-700: #eaf9ff;
+  --sky-100-gray-900: #eaf9ff;
+  --sky-100-twilight-900: #eaf9ff;
+  --sky-200-gray-700: #cbf1ff;
+  --sky-200-sky-500: #cbf1ff;
+  --sky-400-sky-500: #51cfff;
+  --sunset-100-gray-700: #fff9e3;
+  --sunset-100-gray-800: #fff9e3;
+  --sunset-100-gray-900: #fff9e3;
+  --sunset-200-gray-800: #ffedab;
+  --sunset-200-sunset-500: #ffedab;
+  --sunset-300-gray-700: #ffdc62;
+  --sunset-400-gray-600: #ffcd1f;
+  --sunset-400-sunset-300: #ffcd1f;
+  --sunset-400-sunset-500: #ffcd1f;
+  --twilight-100-gray-600: #edefff;
+  --twilight-100-gray-700: #edefff;
+  --twilight-100-gray-800: #edefff;
+  --twilight-100-gray-900: #edefff;
+  --twilight-100-twilight-300: #edefff;
+  --twilight-100-twilight-400: #edefff;
+  --twilight-100-twilight-600: #edefff;
+  --twilight-100-twilight-800: #edefff;
+  --twilight-100-twilight-900: #edefff;
+  --twilight-200-gray-500: #dbdfff;
+  --twilight-200-gray-600: #dbdfff;
+  --twilight-200-gray-700: #dbdfff;
+  --twilight-200-gray-800: #dbdfff;
+  --twilight-200-twilight-300: #dbdfff;
+  --twilight-200-twilight-500: #dbdfff;
+  --twilight-200-twilight-600: #dbdfff;
+  --twilight-200-twilight-800: #dbdfff;
+  --twilight-300-gray-500: #a8b1ff;
+  --twilight-300-twilight-200: #a8b1ff;
+  --twilight-300-twilight-400: #a8b1ff;
+  --twilight-300-twilight-500: #a8b1ff;
+  --twilight-400-gray-500: #7583ff;
+  --twilight-400-gray-600: #7583ff;
+  --twilight-400-twilight-300: #7583ff;
+  --twilight-500-gray-100: #4255ff;
+  --twilight-500-gray-200: #4255ff;
+  --twilight-500-gray-400: #4255ff;
+  --twilight-500-gray-700: #4255ff;
+  --twilight-500-gray-800: #4255ff;
+  --twilight-500-gray-900: #4255ff;
+  --twilight-500-twilight-200: #4255ff;
+  --twilight-500-twilight-300: #4255ff;
+  --twilight-500-twilight-400: #4255ff;
+  --twilight-500-twilight-600: #4255ff;
+  --twilight-500-twilight-900: #4255ff;
+  --twilight-600-gray-100: #423ed8;
+  --twilight-600-gray-400: #423ed8;
+  --twilight-600-gray-500: #423ed8;
+  --twilight-600-gray-700: #423ed8;
+  --twilight-600-gray-800: #423ed8;
+  --twilight-600-gray-900: #423ed8;
+  --twilight-600-mint-400: #423ed8;
+  --twilight-600-twilight-400: #423ed8;
+  --twilight-600-twilight-500: #423ed8;
+  --twilight-600-twilight-700: #423ed8;
+  --twilight-700-twilight-600: #1f1c8b;
+  --twilight-700-gray-600: #1f1c8b;
+  --twilight-800-gray-700: #14125c;
+  --twilight-900-gray-100: #0a092d;
+  --twilight-900-gray-600: #0a092d;
+  --twilight-900-gray-700: #0a092d;
+  --twilight-900-twilight-700: #0a092d;
+  --twilight-900-twilight-800: #0a092d;
+  --card-background-transparent: #fff0;
+  --search-placeholder-text: #282e3ecc;
+  --typeahead-search-results-opacity: #f6f7fb00;
+  --typeahead-search-scrollbar: #1a1d2833;
+  --typeahead-search-scrollbar-border: #fff;
+  --modal-footer-transparent: #fff0;
+  --overlay-background: #282e3e80;
+  --pill-background-subtle: #edeff4;
+  --pill-background-subtle-color: #ffe8d8;
+  --feed-onboarding-modal-image-background-color: #eaf9ff;
+  --emoji-button-background-color: #dbdfff;
+  --teal-100-gray-800: #e7f9f9;
+  --teal-400-teal-300: #3ccfcf;
+  --teal-500-teal-200: #28a7a7;
+  --teal-500-teal-300: #28a7a7;
+  --backdrop-opacity: #1a1d2880;
+  --radio-button-hover: #939bb459;
+  --shadow-with-opacity: #2e385614;
+  --white-badge-background-transparent: #dbdfff99;
+  box-sizing: inherit;
+  padding-top: 4rem;
+  box-sizing: border-box;
+  transform: translate(0px, 150%);
+}
+
+.quizlet-header {
+  text-align: center;
+  box-sizing: inherit;
+  font-size: 2rem;
+  font-weight: var(--typography-heading-weight);
+  letter-spacing: normal;
+  line-height: 1.25;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+}
+
+.quizlet-inside {
+  box-sizing: inherit;
+  margin: 0 auto;
+  max-width: 20.5rem;
+  text-align: left;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  margin-top: 1.5rem;
+}
+
+.quizlet-code-input {
+  text-align: left;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  box-sizing: inherit;
+  align-items: center;
+  display: flex;
+}
+
+.quizlet-code-button {
+  display: block;
+  text-align: center;
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  margin-top: 1.5rem;
+}
+
+.quizlet-code-button button {
+  display: inline-block;
+  box-sizing: inherit;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  border: none;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font: inherit;
+  transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: 1.222222222222222;
+  padding: 1.5rem 5rem;
+  max-width: 18.75rem;
+  width: 90%;
+  cursor: default;
+  background-color: var(--gray-400);
+  box-shadow: none;
+  color: #fff;
+}
+
+.quizlet-code-button button span {
+  font: inherit;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  line-height: 1.222222222222222;
+  cursor: default;
+  color: #fff;
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.quizlet-code-input-cell {
+  text-align: left;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  box-sizing: inherit;
+  align-items: center;
+  display: flex;
+}
+
+.quizlet-ui-input {
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.25;
+  text-align: center;
+  width: 33.33333%;
+}
+
+.quizlet-ui-input-content {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.25;
+  text-align: center;
+  box-sizing: inherit;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  align-items: flex-start;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  width: 100%;
+}
+
+.quizlet-divider {
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  align-items: center;
+  display: flex;
+  margin: 0 1rem;
+  white-space: nowrap;
+  font-size: 1.25rem;
+  height: 0.625rem;
+  letter-spacing: normal;
+  line-height: 1.4;
+  padding-bottom: 5%; 
+  flex-shrink: 0;
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(-30%);
+}
+
+.quizlet-ui-input-input {
+  font-family: none /*fix me*/;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  background-color: initial;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: var(--gray-900-gray-200);
+  cursor: text;
+  filter: none;
+  flex: 1 1 auto;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  outline: none;
+  text-align: inherit;
+  white-space: pre-wrap;
+  width: 100%;
+  word-break: break-word;
+  padding-bottom: 0;
+}
+
+.quizlet-button.active {
+    background-color: #228b22;
+  }
+.quizlet-button.active:hover {
+  animation-name: hovercolor;
+  animation-duration: 0.12s;
+  animation-fill-mode: forwards;
+}
+
+.quizlet-ui-input-border /* Span class also UIInput-border*/ {
+    color: var(--gray-700-gray-200);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.25;
+    text-align: center;
+    box-sizing: inherit;
+    font-feature-settings: "kern","liga","clig","calt";
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    align-self: flex-end;
+    box-shadow: 0 .125rem 0 0 var(--gray-700-gray-200);
+    display: block;
+    height: .25rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    width: 100%;
+}
+
+.quizlet-ui-input-label /* Span class also UIInput-label contains the _*/ {
+    cursor: pointer;
+    box-sizing: inherit;
+    font-feature-settings: "kern","liga","clig","calt";
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    color: var(--gray-500-gray-400);
+    display: block;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    margin-top: .625rem;
+    text-align: inherit;
+    text-transform: uppercase;
+    user-select: none;
+    visibility: hidden;
 }
