@@ -9,6 +9,7 @@ service firebase.storage {
       allow read, write: if false;
       cors {
         origin = ["http://127.0.0.1:5500"];
+        origin = ["https://spammersrus.com"]
       }
     }
   }

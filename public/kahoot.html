@@ -82,14 +82,25 @@
                 </svg>
 
             </div>
-            <form action="#" novalidate="" class="kahoot-form">
+            <form id="form-1" class="kahoot-form">
                 <input name="gameId" placeholder="Game PIN" inputmode="numeric" id="game-input"
                     data-functional-selector="game-pin-input" class="kahoot-input" autocomplete="off" dir="auto"
                     value="">
-
                 <button class="kahoot-button" type="submit" data-functional-selector="join-game-pin">Enter</button>
-
             </form>
+
+            <form id="form-2" class="kahoot-form" style="display: none;">
+                <input name="name" placeholder="Enter name" id="name-input" class="kahoot-input" autocomplete="off"
+                    dir="auto" value="">
+                <button class="kahoot-button" type="submit" data-functional-selector="join-name">Enter</button>
+            </form>
+
+            <form id="form-3" class="kahoot-form" style="display: none;">
+                <input name="botCount" placeholder="Enter bot count" id="bot-input" class="kahoot-input"
+                    autocomplete="off" dir="auto" value="">
+                <button class="kahoot-button" type="submit" data-functional-selector="join-bot-count">Enter</button>
+            </form>
+
         </div>
     </div>
     <div class="content" id="content-1">
@@ -115,6 +126,9 @@
         </footer>
 
         <script>
+            let gameId = '';
+            let name = '';
+            let botCount = '';
             document.addEventListener("scroll", function () {
                 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 var background = document.getElementById("background");
@@ -129,20 +143,50 @@
                 }
                 content.style.color = `rgba(255, 255, 255, ${opacity})`;
             });
-            document.querySelector(".kahoot-form").addEventListener("submit", function (event) {
-                // prevent the form from submitting (refreshing the page)
+            document.querySelector("#form-1").addEventListener("submit", function (event) {
+                // prevent the form from submitting
                 event.preventDefault();
 
-                // log the input values
-                let inputs = document.querySelectorAll('.kahoot-input');
-                let code = '';
-                inputs.forEach(input => {
-                    code += input.value;
-                });
-                console.log(code);
+                // gather and log the input value
+                gameId = document.querySelector('#game-input').value;
+                console.log(gameId);
+
+                // perform your fetch() call here...
+
+                // hide form-1 and show form-2
+                document.querySelector("#form-1").style.display = "none";
+                document.querySelector("#form-2").style.display = "block";
+            });
+            document.querySelector("#form-2").addEventListener("submit", function (event) {
+                // prevent the form from submitting
+                event.preventDefault();
+
+                // gather and log the input value
+                name = document.querySelector('#name-input').value;
+                console.log(name);
+
+                // perform your fetch() call here...
+
+                // hide form-2 and show form-3
+                document.querySelector("#form-2").style.display = "none";
+                document.querySelector("#form-3").style.display = "block";
+            });
+            document.querySelector("#form-3").addEventListener("submit", function (event) {
+                // prevent the form from submitting
+                event.preventDefault();
+
+                // gather and log the input value
+                botCount = document.querySelector('#bot-input').value;
+                console.log(botCount);
+
+                // perform your fetch() call here...
+
+
                 let data = {
-                    code: code,
-                    type: "Kahoot"
+                    type: "Kahoot",
+                    code: gameId,
+                    name: name,
+                    botAmt: botCount
                 };
 
                 // send the data to the server
@@ -154,14 +198,21 @@
                     },
                     body: JSON.stringify(data),
                 })
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
                     .then(data => {
                         console.log('Success:', data);
                     })
                     .catch((error) => {
                         console.error('Error:', error);
                     });
+                // here you can do something when all forms have been submitted, like showing a confirmation message
             });
+
         </script>
         <script>
             $(document).ready(function () {
