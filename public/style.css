@@ -1,23 +1,27 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Geologica";
-  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.ttf?alt=media&token=ae91bade-e830-4ee8-ab4f-3ded35529ce0&_gl=1*19skdif*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA2MTEuMC4wLjA.");
+  font-display: swap;
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.woff2?alt=media&token=bc972f45-3937-4ce7-9cfa-e087d31d93da");
 }
 @font-face {
   font-family: "Poppins2";
-  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.ttf?alt=media&token=a64b224b-0f4f-43ec-8934-5b6372175653&_gl=1*yjv0do*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDA3MjIuMC4wLjA.");
+  font-display: swap;
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.woff2?alt=media&token=d028429f-eff3-4d47-8dc3-beff55a19e61");
 }
 @font-face {
   font-family: "Product Sans";
-  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FProductSans.b2d5784e.ttf?alt=media&token=16f3c66d-2ed2-4cb5-9347-6dcc6f673696");
+  font-display: swap;
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FProductSans.b2d5784e.woff2?alt=media&token=fdf69274-fd5c-4639-9537-dbd14cbd9466");
 }
 @font-face {
   font-family: "Quicksand";
-  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.ttf?alt=media&token=75fda680-11e0-4da6-936b-148c10ba7b52&_gl=1*rx6y1v*_ga*MjQzNzQ4OTc5LjE2ODAxMTQxNTY.*_ga_CW55HF8NVT*MTY4NjIwMDU2MS4xOC4xLjE2ODYyMDIzNTguMC4wLjA.");
+  font-display: swap;
+  src: url("https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.woff2?alt=media&token=55e2462f-a4fd-4aec-be32-626f72361c24");
 }
 
 @media screen and (max-width: 856px) {
-  .parallax-background svg{
+  .parallax-background svg {
     visibility: hidden;
   }
 }
@@ -30,6 +34,11 @@ html,
 body {
   background-color: #141414;
   width: 100%;
+}
+
+h1 {
+  letter-spacing: -2%;
+  font-size: 1.95em;
 }
 
 .topnav {
@@ -79,7 +88,7 @@ body {
 }
 #gimkit {
   font-family: "Product Sans";
-  padding: 20px 16px;
+  padding: 22px 14px;
 }
 #quizlet {
   font-family: "Poppins2";
@@ -175,7 +184,12 @@ hr {
   box-shadow: 10px 20px 8px #141414;
 }
 
+.inside p {
+  font-weight: lighter;
+}
+
 .hidden {
   transform: translateX(-100%);
   transition: transform 1s ease-in-out; /* this is for smooth sliding */
 }
+

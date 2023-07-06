@@ -20,12 +20,24 @@
     <script defer src="/__/firebase/9.22.1/firebase-analytics-compat.js"></script>
     <script defer src="/__/firebase/9.22.1/firebase-remote-config-compat.js"></script>
     <script defer src="/__/firebase/9.22.1/firebase-performance-compat.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script defer src="/__/firebase/init.js?useEmulator=false"></script>
+
+    <link rel="preload"
+        href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FGeologica-VariableFont.woff2?alt=media&token=bc972f45-3937-4ce7-9cfa-e087d31d93da"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FPoppins-Regular.woff2?alt=media&token=d028429f-eff3-4d47-8dc3-beff55a19e61"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FProductSans.b2d5784e.woff2?alt=media&token=fdf69274-fd5c-4639-9537-dbd14cbd9466"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/fonts%2FQuicksand-VariableFont_wght.woff2?alt=media&token=55e2462f-a4fd-4aec-be32-626f72361c24"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload"
+        href="https://firebasestorage.googleapis.com/v0/b/thug-002.appspot.com/o/images%2Frobothonk.ico?alt=media&token=aa28361e-3408-434f-a479-a13ba6587a01"
+        as="image" type="image/x-icon" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="kahoot.css">
 
@@ -38,6 +50,7 @@
 </head>
 
 <body>
+    <div id="load"></div>
     <div class="topnav">
         <a href="index.html" id="banner">Spammers R Us</a>
         <a href="kahoot.html" class="change-bg" id="kahoot" data-bg="">Kahoot</a>
