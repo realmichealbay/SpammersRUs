@@ -28,6 +28,7 @@
 
 html {
   margin: 0;
+  overflow-x: hidden;
 }
 
 html,
@@ -82,40 +83,53 @@ h1 {
   }
 }
 
+/*padding top right bottom left */
+
 #kahoot {
   font-family: "Montserrat", sans-serif;
-  padding: 20px 16px;
+  padding: 22px 16px 18.1px;
 }
 #gimkit {
   font-family: "Product Sans";
-  padding: 22px 14px;
+  padding: 23px 16px 17.1px;
 }
 #quizlet {
   font-family: "Poppins2";
-  padding: 14px 16px 26px 16px;
+  padding: 16px 16px 24.1px;
 }
 #quizizz {
   font-family: "Quicksand";
-  padding: 14px 16px 26px 16px;
+  padding: 18px 16px 22.1px;
+}
+
+footer {
+  position: relative; /* or 'absolute' depending on your need */
+  bottom: 0;
+  width: 100%; /* ensure the footer takes the full width */
+  height: auto;
 }
 
 .bottomnav {
   background-color: #141414;
   overflow: hidden;
   left: 0;
-  position: absolute;
-  width: 100%;
+  height: 100%; /* ensures the nav takes up the full height of the footer */
+  width: 100%; /* ensures the nav takes up the full width of the footer */
   padding-left: 20px;
 }
+
 .bottomnav a {
   height: 35px;
+  padding: 20px 16px;
   float: left;
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
   font-size: 24px;
 }
+
 .bottomnav a:hover {
+  background-color: #181818;
   animation: hoverover 500ms linear;
 }
 
@@ -162,13 +176,13 @@ hr {
 }
 
 .parent {
-  height: 1000px;
+  height: auto;
   display: grid;
   grid-template-columns: 25% 1fr 25%;
   grid-template-rows: auto;
   grid-column-gap: 0px;
   grid-row-gap: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 25%;
   padding-top: 10%;
 }
 
@@ -192,4 +206,3 @@ hr {
   transform: translateX(-100%);
   transition: transform 1s ease-in-out; /* this is for smooth sliding */
 }
-
